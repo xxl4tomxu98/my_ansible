@@ -8,8 +8,8 @@
 		"dockerfile": "Dockerfile",
 		"context": ".."
 	},
-	//"image": "ghcr.io/xxl4tomxu98/ansible:latest",
-
+	//"image": "ghcr.io/xxl4tomxu98/my_ansible:latest",
+	
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 
