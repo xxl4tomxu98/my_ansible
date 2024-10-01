@@ -1,6 +1,8 @@
 FROM mcr.microsoft.com/devcontainers/python:1-3.12-bookworm
 # OCI Labels
 LABEL org.opencontainers.image.source="https://github.com/xxl4tomxu98/my_ansible"
+LABEL org.opencontainers.image.description="Devcontainer Ansible "
+LABEL org.opencontainers.image.licenses="GPL-3.0"
 # install poetry for python dependencies
 RUN python3 -m pip install poetry~=1.8.3
 # enable bash completion for git
