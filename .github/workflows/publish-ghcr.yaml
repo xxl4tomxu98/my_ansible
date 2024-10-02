@@ -1,0 +1,17 @@
+---
+name: Dokcer Image CI for ghcr.io
+
+on:
+  push
+    
+jobs:
+  build-devcontainer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+      - name: Build and push the image
+        run: |
+          docker login --username xxl4tomxu98 --password ${{ secrets.TOM_HTTPS_TOKEN }} ghcr.io
+          docker build . --tag ghcr.io/xxl4tomxu98/my_ansible:latest
+          docker push ghcr.io/xxl4tomxu98/my_ansible:latest
