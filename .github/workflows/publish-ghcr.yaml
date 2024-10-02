@@ -13,5 +13,5 @@ jobs:
       - name: Build and push the image
         run: |
           docker login --username xxl4tomxu98 --password ${{ secrets.TOM_HTTPS_TOKEN }} ghcr.io
-          docker build ../../.devcontainer --tag ghcr.io/xxl4tomxu98/my_ansible:latest
+          docker build ../../.devcontainer/ --tag ghcr.io/xxl4tomxu98/my_ansible:latest
           docker push ghcr.io/xxl4tomxu98/my_ansible:latest
