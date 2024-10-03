@@ -18,9 +18,9 @@ WORKDIR /workspaces/my_ansible
 
 COPY poetry.lock pyproject.toml .
 
-# RUN chown -R vscode:vscode /workspaces
+RUN chown -R vscode:vscode /workspaces
 
-# USER vscode
+USER vscode
 
 RUN poetry install
 
