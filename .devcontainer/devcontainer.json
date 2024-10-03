@@ -23,22 +23,40 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [				
-				"redhat.ansible",				
-				"tamasfe.even-better-toml"				
+				"bierner.markdown-preview-github-styles",
+				"DavidAnson.vscode-markdownlint",
+				"dhoeric.ansible-vault",
+				"donjayamanne.githistory",
+				"eamodio.gitlens",
+				"esbenp.prettier-vscode",
+				"mhutchie.git-graph",
+				"ms-python.black-formatter",
+				"ms-python.flake8",
+				"ms-python.isort",
+				"oderwat.indent-rainbow",
+				"redhat.ansible",
+				"samuelcolvin.jinjahtml",
+				"tamasfe.even-better-toml",
+				"yzhang.markdown-all-in-one"				
 			],
 			"settings": {				
 				"ansible.python.interpreterPath": "/venv/bin/python3",				
-				"python.defaultInterpreterPath": "/venv/bin/python3",
-				
+				"python.defaultInterpreterPath": "/venv/bin/python3",								
 				"[python]": {
 					"editor.codeActionsOnSave": {
 						"source.organizeImports": "explicit"
 					}
-				}
-			}
-    	}
+				},
+				"editor.formatOnSave": true,
+				"files.associations": {
+					"*.j2": "ansible-jinja",
+					"*.yml": "ansible"
+				},
+				"files.trimFinalNewlines": true,
+				"files.trimTrailingWhitespace": true			
+    		}
+		}
 	},
-
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	"remoteUser": "root"
 }
