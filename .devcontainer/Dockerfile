@@ -6,7 +6,7 @@ LABEL org.opencontainers.image.licenses="GPL-3.0"
 # install poetry for python dependencies
 RUN python3 -m pip install poetry~=1.8.3
 # enable bash completion for git
-# RUN echo "source /usr/share/bash-completion/completions/git" >> ~/.bashrc
+RUN echo "source /usr/share/bash-completion/completions/git" >> ~/.bashrc
 
 WORKDIR /workspaces/my_ansible
 
