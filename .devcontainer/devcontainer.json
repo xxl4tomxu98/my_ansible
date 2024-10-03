@@ -4,11 +4,11 @@
 	"name": "My-Ansible-2024",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	// "image": "mcr.microsoft.com/devcontainers/python:1-3.12-bookworm"
-	"build": {
-		"dockerfile": "Dockerfile",
-		"context": ".."
-	},
-	//"image": "ghcr.io/xxl4tomxu98/my_ansible:latest",
+	//"build": {
+	//	"dockerfile": "Dockerfile",
+	//	"context": ".."
+	//},
+	"image": "ghcr.io/xxl4tomxu98/my_ansible:latest",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
@@ -42,7 +42,7 @@
 			"settings": {
 				"ansible.python.interpreterPath": "/venv/bin/python3",
 				"python.defaultInterpreterPath": "/venv/bin/python3",
-				
+
 				"[python]": {
 					"editor.codeActionsOnSave": {
 						"source.organizeImports": "explicit"
