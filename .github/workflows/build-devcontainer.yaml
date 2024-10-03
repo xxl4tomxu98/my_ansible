@@ -51,3 +51,4 @@ jobs:
           file: .devcontainer/Dockerfile
           labels: ${{ steps.metadata.outputs.labels }}
           tags: ${{ steps.metadata.outputs.tags }}
+          provenance: false
