@@ -5,6 +5,12 @@ LABEL org.opencontainers.image.description="Devcontainer Ansible "
 LABEL org.opencontainers.image.licenses="GPL-3.0"
 # install poetry for python dependencies
 RUN python3 -m pip install poetry~=1.8.3
+# install useful system packages
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get install -y sshpass vim iputils-ping
+RUN apt-get clean
+# make prompt multiline cause it's too long by default
+RUN sed -i -E -e '/PS1="\$/c\    PS1=" ${userpart} ${lightblue}\\w ${gitbranch}${removecolor}\\n\\$ "' ~/.bashrc
 # enable bash completion for git
 RUN echo "source /usr/share/bash-completion/completions/git" >> ~/.bashrc
 
