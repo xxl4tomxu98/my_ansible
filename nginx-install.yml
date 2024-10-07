@@ -1,0 +1,16 @@
+---
+- name: nginx install & start services
+  hosts: localhost
+  gather_facts: false
+  become: true
+
+  tasks:
+    - name: install nginx
+      ansible.builtin.package:
+        name: nginx
+        state: latest
+
+    - name: start nginx service
+      ansible.builtin.service:
+        name: nginx
+        state: started
