@@ -36,6 +36,7 @@
 				"oderwat.indent-rainbow",
 				"redhat.ansible",
 				"samuelcolvin.jinjahtml",
+				"ms-azuretools.vscode-docker",
 				"tamasfe.even-better-toml",
 				"yzhang.markdown-all-in-one"
 			],
